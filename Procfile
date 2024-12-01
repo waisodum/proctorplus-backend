@@ -1,0 +1,1 @@
+web: gunicorn proctorplus.wsgi --log-file -

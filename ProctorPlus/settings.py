@@ -25,11 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-00f95u5mbiesa=i(l*c(9-*x55%6)@lbxc+gv0%lkitkw&*ozy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
-
+CSRF_TRUSTED_ORIGINS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
@@ -71,7 +71,7 @@ LOGOUT_REDIRECT_URL = '/admin/login/'
 ROOT_URLCONF = 'ProctorPlus.urls'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # Vite dev server
+    "*"  # Vite dev server
 ]
 CORS_ALLOWED_HEADERS = [
     'accept',
