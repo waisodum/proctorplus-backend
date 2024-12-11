@@ -130,23 +130,20 @@ WSGI_APPLICATION = 'ProctorPlus.wsgi.application'
 
 load_dotenv()
 print("Database settings:")
-print(f"NAME: {os.getenv('DB_NAME')}")
-print(f"USER: {os.getenv('DB_USER')}")
-print(f"PASSWORD: {os.getenv('DB_PASSWORD')}")
-print(f"HOST: {os.getenv('DB_HOST')}")
-print(f"PORT: {os.getenv('DB_PORT')}")
+print(f"NAME: {os.getenv('PGDATABASE')}")
+print(f"USER: {os.getenv('PGUSER')}")
+print(f"PASSWORD: {os.getenv('PGPASSWORD')}")
+print(f"HOST: {os.getenv('PGHOST')}")
+print(f"PORT: {os.getenv('PGPORT')}")
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT'),
-        'OPTIONS': {
-            'connect_timeout': 5,
-        }
+        'NAME': os.getenv('PGDATABASE'),
+        'USER': os.getenv('PGUSER'),
+        'PASSWORD': os.getenv('PGPASSWORD'),
+        'HOST': os.getenv('PGHOST'),
+        'PORT': os.getenv('PGPORT'),
     }
 }
 
